@@ -31,8 +31,8 @@ class RS485Tester:
     # Test packet definitions
     OFFLINE_QUERY_PACKET = bytes.fromhex("aa55807f00000001fe")
     REMOVE_REGISTER_PACKET = bytes.fromhex("aa55807f0002000200")
-    # New Test Packet Definitions
-    ALLOCATE_REGISTER_ADDRESS_PACKET = bytes.fromhex("aa55807f000011313330303053535531323530303039381105a9")
+    # New Test Packet Definitions, aa55807f0000 changed to aa5580110001, where 01 is allocate register
+    ALLOCATE_REGISTER_ADDRESS_PACKET = bytes.fromhex("aa55807f000111313330303053535531323530303039381105a9")
     READ_DATA_PACKET = bytes.fromhex("aa5580110101000192")
     
     def __init__(self, port: str = "/dev/ttyUSB0", baudrate: int = 9600,
